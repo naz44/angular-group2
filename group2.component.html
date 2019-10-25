@@ -1,0 +1,14 @@
+<p>Group2 works!</p>
+<table >
+    
+    <tr *ngFor="let l of list">
+        <td>{{ l.name}}</td> 
+        <td>{{ l.lastname}}</td>  
+        <td>{{ l.place}}</td>            
+        <td *ngIf='l.showValues'>{{ l.occupation}}</td>
+        <td *ngIf='l.showValues'>{{ l.dob}}</td>
+        <button (click) ='l.showValues= !l.showValues'>
+                {{ l.showValues ? "Hide full details" : "Show full details" }}</button>
+    </tr>
+    
+</table>
